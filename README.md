@@ -52,7 +52,7 @@ This is a personal portfolio website that showcases information about the owner,
 
 ## Author
 
-Wilson Hosea
+Wilson Hosea scb212-0254/2024
 
 ## License
 
