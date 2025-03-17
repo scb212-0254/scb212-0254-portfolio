@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe 1 - Beef Pilau</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: #007BFF;
+        }
+        section {
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        h3 {
+            color: #555;
+        }
+        ul {
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+        .navigation-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .navigation-buttons a {
+            text-decoration: none;
+        }
+        .navigation-buttons button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .navigation-buttons button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chicken masala</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="recipe.html">RECIPE</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <section class="Menu">
+            <h2>Chicken masala</h2>
+            <img src="./images/CHICKEN MARSALA Recipe on Food52.jpeg" alt="chicken masala image">
+
+            <h3>Ingredients</h3>
+            <ul>
+                <li>3 tablespoons olive oil.</li>
+                <li>4 (6 ounce) skinless, boneless chicken breast halves.</li>
+                <li>1 cup sliced fresh mushrooms.</li>
+                <li>¼ cup chopped green onion.</li>
+                <li>⅓ cup Marsala wine.</li>
+                <li>⅓ cup heavy cream.</li>
+                <li>⅛ cup milk.</li>
+            </ul>
+
+            <h3>Instructions:</h3>
+            <ul>
+                <li>Heat olive oil in a large skillet over medium heat. Saute chicken in hot oil until cooked through and juices run clear, 15 to 20 minutes..</li>
+                <li>Add mushrooms and green onions to the pan and saute until soft, then add Marsala wine and bring to a boil.</li>
+                <li>Continue to boil for 2 to 4 minutes, seasoning with salt and pepper to taste.</li>
+                <li>Stir in cream and milk and simmer until heated through, about 5 minutes</li>
+            </ul>
+        </section>
+
+        <!-- Navigation Buttons -->
+        <div class="navigation-buttons">
+            <a href="recipe2.html">
+                <button>next page</button>
+            </a>
+            <button id="previousButton">Previous</button>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
+
+    <script>
+        // JavaScript for the Previous Button
+        const previousButton = document.getElementById('previousButton');
+        let currentPage = 1; // Tracks the current page in the navigation sequence
+
+        previousButton.addEventListener('click', () => {
+            if (currentPage === 1) {
+                // First click: Redirect to About page
+                window.location.href = 'about.html';
+                currentPage = 2; // Update to the next step
+            } else if (currentPage === 2) {
+                // Second click: Redirect to Menu page
+                window.location.href = 'menu.html';
+                currentPage = 1; // Reset to the first step
+            }
+        });
+    </script>
+</body>
+</html>
